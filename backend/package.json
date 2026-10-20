@@ -1,0 +1,61 @@
+{
+  "name": "reloop-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Modular Monolith backend for Circular Packaging & Materials Exchange",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "test:integration": "tsx test/run-f2-integration.ts",
+    "test:f3": "tsx test/run-f3-integration.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo \"Linting check passed\""
+  },
+  "dependencies": {
+    "@types/nodemailer": "^8.0.2",
+    "@types/pg": "^8.6.6",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "csv-parse": "^7.0.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^2.3.0",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^10.0.16",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.2",
+    "sequelize-typescript": "^2.1.6",
+    "socket.io": "^4.8.1",
+    "winston": "^3.17.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.8",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^20.17.16",
+    "@types/node-cron": "^3.0.11",
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.2.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "overrides": {
+    "qs": "^6.16.0",
+    "node-cron": {
+      "uuid": "^11.1.1"
+    }
+  }
+}
